@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:newsapitask/NewsPage.dart';
 import 'package:newsapitask/services/Services.dart';
 import 'package:newsapitask/view_model/list_news_view_model.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,11 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (_) => ListNewsViewModel()),
-          ],
-          child: NewsPage()),
+      home:NewsPage(),
     );
   }
 }
